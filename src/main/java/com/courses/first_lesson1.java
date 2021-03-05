@@ -14,7 +14,7 @@ public static void main (String [] args) {
 
     WebDriverManager.chromedriver();
     WebDriver driver = new ChromeDriver();
-
+    WebDriver driver = new ChromeDriver();
 
   }
 
