@@ -44,11 +44,10 @@ public class first_lesson1 {
         select.selectByValue("za");
         select.selectByVisibleText("Name (Z to A)");
 
-
-        //WebElement list = driver.findElement(By.className("product_sort_container"));
-       ///List<WebElement> list = driver.findElements(By.xpath("//button"));
-       // WebElement addToCart3 = list.get(4);
-       //  addToCart3.click();
+        
+       List<WebElement> listNew = driver.findElements(By.xpath("//button"));
+       WebElement addToCart3 = listNew.get(4);
+        addToCart3.click();
 
 
      WebElement burgerButton = driver.findElement (By.id("react-burger-menu-btn"));
