@@ -6,16 +6,24 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class first_lesson1 {
+public class thirdLesson {
+   WebDriver driver;
+   @BeforeMethod
+   public void setUp(){
+       driver
+       WebDriverManager.chromedriver().setup();
+       driver= new ChromeDriver();
+   };
 
-    public static void main(String[] args) {
-        int indexForReversionFilter = 1;
+    @Test
+    public void firstTest() {
 
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com");
 
         WebElement usernameField = driver.findElement(By.className("form_input"));
@@ -45,19 +53,18 @@ public class first_lesson1 {
         select.selectByVisibleText("Name (Z to A)");
 
 
-       List<WebElement> listNew = driver.findElements(By.xpath("//button"));
-       WebElement addToCart3 = listNew.get(4);
+        List<WebElement> listNew = driver.findElements(By.xpath("//button"));
+        WebElement addToCart3 = listNew.get(4);
         addToCart3.click();
 
 
-     WebElement burgerButton = driver.findElement (By.id("react-burger-menu-btn"));
-     WebElement logoutButton = driver.findElement(By.id("logout_sidebar_link"));
-     burgerButton.click();
-     logoutButton.click();
-
-
-
-     driver.quit();
-
+        WebElement burgerButton = driver.findElement (By.id("react-burger-menu-btn"));
+        WebElement logoutButton = driver.findElement(By.id("logout_sidebar_link"));
+        burgerButton.click();
+        logoutButton.click();
+    }
+    @AfterMethod
+    public void tearDown(){
+        driver.quit();
     }
 }
