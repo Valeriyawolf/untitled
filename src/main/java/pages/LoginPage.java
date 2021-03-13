@@ -6,20 +6,23 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage {
 
-   private WebDriver driver;
+    private WebDriver driver;
+
+    private String username = "standard_user";
+    private String password = "secret_sauce";
 
    public LoginPage (WebDriver driver) {
        this.driver = driver;
    }
-   public void login(String username, String password) {
+   public void login() {
        WebElement usernameField = driver.findElement(By.id("user-name"));
-       WebElement passwordField = driver.findElement(By.id("password"));
-       WebElement loginButton = driver.findElement(By.id("login-button"));
-
        usernameField.sendKeys(username);
-       passwordField.sendKeys(password);
-       loginButton.click();
 
+       WebElement passwordField = driver.findElement(By.id("password"));
+       passwordField.sendKeys(password);
+
+       WebElement loginButton = driver.findElement(By.id("login-button"));
+       loginButton.click();
 
    }
 

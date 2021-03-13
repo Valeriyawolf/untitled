@@ -14,7 +14,7 @@ public class LessonThree {
     @Test
     public void lessonThree(){
         LoginPage loginPage = new LoginPage(driver);
-        LoginPage.
+        loginPage.login();
 
     }
     @AfterMethod

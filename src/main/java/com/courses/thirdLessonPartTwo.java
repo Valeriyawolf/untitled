@@ -29,7 +29,9 @@ public class thirdLessonPartTwo {
             WebElement errorButton = driver.findElement(By.className("error-button"));
             errorButton.click();
 
-            String stringError = 'Username is required';
+            //What is this?
+            // String stringError = "Username is required";
+
 
         }
 
