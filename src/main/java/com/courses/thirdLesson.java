@@ -48,7 +48,8 @@ public class thirdLesson {
             System.out.println(listOfOptions.get(i).getText());
         }
 
-        select.selectByIndex("indexForReversionFilter");
+
+        select.selectByValue("indexForReversionFilter");
         select.selectByValue("za");
         select.selectByVisibleText("Name (Z to A)");
 
