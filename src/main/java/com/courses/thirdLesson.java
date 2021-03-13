@@ -16,7 +16,7 @@ public class thirdLesson {
    WebDriver driver;
    @BeforeMethod
    public void setUp(){
-       driver
+
        WebDriverManager.chromedriver().setup();
        driver= new ChromeDriver();
    };

@@ -11,22 +11,30 @@ import org.testng.annotations.Test;
 
 public class thirdLessonPartTwo {
 
-         WebDriver driver;
+        WebDriver driver;
         @BeforeMethod
         public void setUp(){
-            driver
-            WebDriverManager.chromedriver().setup();
             driver= new ChromeDriver();
+            WebDriverManager.chromedriver().setup();
+
         };
 
         @Test
-        public void firstTest() {
+        public void secondTest() {
 
             driver.get("https://www.saucedemo.com");
+            WebElement loginButton = driver.findElement(By.xpath("//input[@type='submit']"));
+            loginButton.click();
 
-            WebElement usernameField = driver.findElement(By.className("form_input"));
+            WebElement errorButton = driver.findElement(By.className("error-button"));
+            errorButton.click();
+
+            String stringError = 'Username is required';
 
         }
+
+
+
          @AfterMethod
          public void tearDown(){
         driver.quit();
