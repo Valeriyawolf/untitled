@@ -1,31 +1,17 @@
 package tests;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
+import org.testng.annotations.Test;
+import pages.LoginPage;
 
 public class LessonFourthHomeworkLogin {
+    WebDriver driver;
 
-        private WebDriver driver;
-
-        private String username = "standard_user";
-        private String password = "secret_sauce";
-
-        public LessonFourthHomeworkLogin (WebDriver driver) {
-            this.driver = driver;
-        }
-        public void login() {
-            WebElement usernameField = driver.findElement(By.id("user-name"));
-            usernameField.sendKeys(username);
-
-            WebElement passwordField = driver.findElement(By.id("password"));
-            passwordField.sendKeys(password);
-
-            WebElement loginButton = driver.findElement(By.id("login-button"));
-            loginButton.click();
-
-        }
-
+    @Test
+    public void LessonFourthHomeworkLogin() {
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.login();
     }
-
+}
 
