@@ -15,7 +15,7 @@ import org.testng.Assert;
             super(driver);
             Assert.assertTrue(driver.getCurrentUrl().contains("/inventory.html"), message: "User not log on()");
 
-            public void logout (){
+            public void logout() {
                 WebElement burgerButton = driver.findElement(By.id("react-burger-menu-btn"));
                 burgerButton.click();
                 WebElement logoutButton= driver.findElement(By.id("logout_sidebar_link"));

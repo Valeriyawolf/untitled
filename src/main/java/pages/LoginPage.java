@@ -36,7 +36,7 @@ public class LoginPage extends BasePages {
 
        correctUsername = getValuesFromCredentialElements (loginCredentialsClass, correctLoginAndPasswordIndex);
        wrongUsername = getValuesFromCredentialElements (loginCredentialsClass, wrongLoginIndex);
-       password = getValuesFromCredentialElements (passwordCredentialsClass, correctLoginAndPasswordIndex;
+       password = getValuesFromCredentialElements (passwordCredentialsClass, correctLoginAndPasswordIndex);
 
           }
           private String getValuesFromCredentialElements (String classname, int index) {
