@@ -2,6 +2,7 @@ package pages;
 
 import Helpers.BasePages;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -26,7 +27,6 @@ public class LoginPage extends BasePages {
         passwordField.sendKeys(password);
         loginButton.click();
 
-
    }
    public void setupCredentials () {
        final String loginCredentialsClass = "login_credentials";
@@ -45,6 +45,9 @@ public class LoginPage extends BasePages {
 
           return values [index];
           }
+        //private void clearText(WebElement element) {
+        //while (element.getAttribute(name: "value").length()>0)
+        // element.sendKeys(Keys.BACK_SPACE);
+        }
 
-}
 

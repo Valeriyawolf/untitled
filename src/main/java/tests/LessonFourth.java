@@ -10,6 +10,6 @@ public class LessonFourth extends BaseTest {
      LoginPage loginPage = new LoginPage(driver);
      loginPage.setupCredentials();
      loginPage.login();
-        
+
     }
 }
