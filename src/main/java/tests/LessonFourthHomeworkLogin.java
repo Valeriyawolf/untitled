@@ -9,7 +9,7 @@ public class LessonFourthHomeworkLogin {
     WebDriver driver;
 
     @Test
-    public void LessonFourthHomeworkLogin() {
+    public void LoginPage() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login();
     }
