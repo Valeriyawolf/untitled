@@ -3,13 +3,15 @@ package tests;
 import Helpers.BaseTest;
 import org.testng.annotations.Test;
 import pages.InventoryPage;
+import pages.LoginPage;
 
 public class LessonFiveTest extends BaseTest {
     @Test
-    public void lessonFive();{
+    public void lessonFive() {
     LoginPage loginPage = new LoginPage(driver);
-    loginPage.login(getRandomLogin(),password:"secret_sauce");
+    loginPage.login(getRandomLogin(),"secret_sauce");
     InventoryPage InventoryPage = new InventoryPage(driver);
+        }
 
     private String getRandomLogin() {
         String correctUsername = "standard_user";
@@ -20,4 +22,4 @@ public class LessonFiveTest extends BaseTest {
     }
 }
 
-}
+

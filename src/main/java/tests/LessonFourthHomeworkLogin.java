@@ -1,17 +1,17 @@
-package tests;
+//package tests;
 
-import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebDriver;
 
-import org.testng.annotations.Test;
-import pages.LoginPage;
+//import org.testng.annotations.Test;
+//import pages.LoginPage;
 
-public class LessonFourthHomeworkLogin {
-    WebDriver driver;
+//public class LessonFourthHomeworkLogin {
+    //WebDriver driver;
 
-    @Test
-    public void LoginPage() {
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.login();
-    }
-}
+    //@Test
+    //public void LoginPage() {
+        //LoginPage loginPage = new LoginPage(driver);
+       // loginPage.login();
+    //}
+//}
 
