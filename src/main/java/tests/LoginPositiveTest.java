@@ -7,11 +7,11 @@ import pages.InventoryPage;
 import pages.LoginPage;
 
 @Test
-public class PositiveLoginTest extends BaseTest {
+public class LoginPositiveTest extends BaseTest {
     private String username;
     private String password;
 
-    public void positiveLoginTest(){
+    public void loginPositiveTest(){
         LoginPage loginPage = new LoginPage(driver);
         username = loginPage.getValuesFromCredentialElements("login_credentials",1);
         password = loginPage.getValuesFromCredentialElements("login_password",1);

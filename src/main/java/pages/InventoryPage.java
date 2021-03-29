@@ -27,7 +27,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
             burgerButton.click();
         }
 
-            public void logout() {
+            public  void logout() {
                 WebDriverWait wdw = new WebDriverWait(driver,  2L);
                 wdw.until(ExpectedConditions.elementToBeClickable(By.id(LOGOUT_BUTTON_ID)));
                 logoutButton.click();
