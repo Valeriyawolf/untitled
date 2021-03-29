@@ -16,6 +16,8 @@ public class LoginNegativeTest extends BaseTest {
         softAssert.assertEquals(loginPage.error.getText(), "Epic sandface: Username is required", "Error message wrong");
         loginPage.login("standard_user", "secret_sauce");
         Assert.assertTrue(driver.getCurrentUrl().contains("inventory-html"), "User not log on");
+
+        softAssert.assertAll();
     }
 
 }
