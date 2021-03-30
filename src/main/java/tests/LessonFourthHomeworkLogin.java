@@ -6,12 +6,12 @@
 //import pages.LoginPage;
 
 //public class LessonFourthHomeworkLogin {
-    //WebDriver driver;
+  // WebDriver driver;
 
-    //@Test
-    //public void LoginPage() {
-        //LoginPage loginPage = new LoginPage(driver);
-       // loginPage.login();
-    //}
+   // @Test
+   // public void LoginPage() {
+    //    LoginPage loginPage = new LoginPage(driver);
+    //    loginPage.login();
+  //  }
 //}
 

@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
     public class InventoryPage extends BasePages {
         private final String LOGOUT_BUTTON_ID = "logout_sidebar_link";
 
-        @FindBy(id = "react-burgen-menu-btn")
+        @FindBy(id = "react-burger-menu-btn")
         private WebElement burgerButton;
 
         @FindBy(id = LOGOUT_BUTTON_ID)

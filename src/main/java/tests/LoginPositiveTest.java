@@ -18,8 +18,11 @@ public class LoginPositiveTest extends BaseTest {
         loginPage.login(username,password);
         Assert.assertTrue(driver.getCurrentUrl().contains("/inventory.html"), "User not log on()");
 
-        InventoryPage.openBurgerMenu();
-        InventoryPage.logout();
+        InventoryPage inventoryPage = new InventoryPage(driver);
+        inventoryPage.openBurgerMenu();
+        inventoryPage.logout();
+
+        new InventoryPage(driver).logout();
 
     }
 }
