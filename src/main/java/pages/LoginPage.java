@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+
 public class LoginPage extends BasePages {
 
     @FindBy(id = "user-name")
@@ -26,7 +27,9 @@ public class LoginPage extends BasePages {
         super(driver);
 
     }
-    public InventoryPage login(String username, String password){
+    public InventoryPage login(String providedUsername, String providedPassword){
+        String username = getText0Empty(providedUsername);
+        String password = getText0Empty(providedPassword);
         clearText(usernameField);
         usernameField.sendKeys(username);
         clearText(passwordField);
@@ -50,6 +53,17 @@ public class LoginPage extends BasePages {
         while (element.getAttribute("value").length() > 0)
             element.sendKeys(Keys.BACK_SPACE);
     }
+    public WebElement getLoginButton(){
+        return loginButton;
+    }
+
+    private String getText0Empty (String providedText) {
+        if (providedText == null)
+        return "";
+
+        else return providedText;
+    }
+
 }
 
 
