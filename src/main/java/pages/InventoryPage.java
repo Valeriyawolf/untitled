@@ -11,31 +11,37 @@ import org.testng.Assert;
 
 
 public class InventoryPage extends BasePages {
-        private final static String LOGOUT_BUTTON_ID = "logout_sidebar_link";
+        private final String LOGOUT_BUTTON_ID = "logout_sidebar_link";
 
         @FindBy(id = "react-burger-menu-btn")
-        private static WebElement burgerButton;
-    private static WebDriver driver;
+        private  WebElement burgerButton;
 
-    @FindBy(id = LOGOUT_BUTTON_ID)
+        @FindBy(id = LOGOUT_BUTTON_ID)
+        @SuppressWarnings("Initialize by PageFactory")
         private WebElement logoutButton;
 
-        public InventoryPage(WebDriver driver) {
+        @FindBy(className = "title")
+        private WebElement title;
+
+
+         InventoryPage(WebDriver driver) {
             super(driver);
             Assert.assertTrue(driver.getCurrentUrl().contains("/inventory.html"),"User not logged on!");
         }
 
         public void logout() {logoutButton.click();}
 
-        public static void openBurgerMenu(){
+        public void openBurgerMenu(){
             burgerButton.click();
             WebDriverWait wdw = new WebDriverWait(driver,  2L);
             wdw.until(ExpectedConditions.elementToBeClickable(By.id(LOGOUT_BUTTON_ID)));
         }
 
         public String getTitleText(){
-            return getTitleText();
+            return title.getText();
 
         }
+
+
     }
 
