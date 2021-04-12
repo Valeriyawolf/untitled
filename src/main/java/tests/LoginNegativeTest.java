@@ -16,13 +16,11 @@ public class LoginNegativeTest extends BaseTest {
 
     @Test
     public void LoginNegativeTest() {
-        //LoginPage loginPage = new LoginPage(driver);
         loginPage = new LoginPage(driver);
         softAssert.assertTrue(isErrorContainsText(""), "Error is present on login page!");
         softAssert.assertFalse(isElementVisible(loginPage.error), "Error message is shown");
 
         loginPage.login(EMPTY_STRING, EMPTY_STRING);
-        //softAssert.assertTrue(isErrorContainsText("Username is required"), USERNAME_ERROR_TEXT);
         softAssert.assertTrue(isErrorContainsText("Username is required"), USERNAME_ERROR_TEXT);
 
         loginPage.login(EMPTY_STRING, PASSWORD);
