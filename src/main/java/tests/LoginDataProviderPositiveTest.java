@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import pages.InventoryPage;
 import pages.LoginPage;
 
-public class LoginDataProviderTest extends BaseTest {
+public class LoginDataProviderPositiveTest extends BaseTest {
     @DataProvider(name= "credentials")
     private Object[][] credentials() {
         String password = "secret-sauce";
@@ -17,7 +17,7 @@ public class LoginDataProviderTest extends BaseTest {
 
 
     @Test (dataProvider = "credentials")
-    public void LoginDataProviderTest(String username, String password){
+    public void LoginDataProviderPositiveTest(String username, String password){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.usernameField.sendKeys(username);
         loginPage.passwordField.sendKeys(password);
