@@ -15,7 +15,6 @@ public class LoginPositiveTest extends BaseTest {
   @Test
     public void loginPositiveTest(){
         LoginPage loginPage = new LoginPage(driver);
-        //System.out.println(loginPage);
         String username = loginPage.getValuesFromCredentialElements("login_credentials",1);
         String password = loginPage.getValuesFromCredentialElements("login_password",1);
         InventoryPage inventoryPage = loginPage.login(username,password);

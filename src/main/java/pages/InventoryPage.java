@@ -24,7 +24,7 @@ public class InventoryPage extends BasePages {
         private WebElement title;
 
 
-         InventoryPage(WebDriver driver) {
+        public InventoryPage(WebDriver driver) {
             super(driver);
             Assert.assertTrue(driver.getCurrentUrl().contains("/inventory.html"),"User not logged on!");
         }

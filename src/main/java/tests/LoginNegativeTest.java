@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 
 import static tests.LoginPositiveTest.CORRECT_LOGIN;
+import static tests.LoginPositiveTest.PASSWORD;
 
 public class LoginNegativeTest extends BaseTest {
     private final static String EMPTY_STRING = "";
@@ -24,7 +25,7 @@ public class LoginNegativeTest extends BaseTest {
         //softAssert.assertTrue(isErrorContainsText("Username is required"), USERNAME_ERROR_TEXT);
         softAssert.assertTrue(isErrorContainsText("Username is required"), USERNAME_ERROR_TEXT);
 
-        loginPage.login(EMPTY_STRING, "secret_sauce");
+        loginPage.login(EMPTY_STRING, PASSWORD);
         softAssert.assertTrue(isErrorContainsText("Username is required"), USERNAME_ERROR_TEXT + "(2)");
 
         loginPage.login(CORRECT_LOGIN, null);
