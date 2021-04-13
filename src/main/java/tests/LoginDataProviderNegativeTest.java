@@ -11,15 +11,12 @@ public class LoginDataProviderNegativeTest extends BaseTest {
     private final static String EMPTY_STRING = "";
     private final static String USERNAME_ERROR_TEXT = "Error for username";
     private LoginPage loginPage;
-    String password = "secret-sauce";
+    String password = "secret_sauce";
     String username = "standard_user";
-
 
     @DataProvider(name = "credentials")
     private Object[][] credentials() {
-
         return new Object[][]{{EMPTY_STRING, EMPTY_STRING}, {EMPTY_STRING, password}, {username, EMPTY_STRING}, {"Test", "Test"}};
-
     }
 
 
@@ -29,12 +26,15 @@ public class LoginDataProviderNegativeTest extends BaseTest {
         loginPage.usernameField.sendKeys(username);
         loginPage.passwordField.sendKeys(password);
         loginPage.loginButton.click();
+
+        softAssert.assertTrue(isErrorContainsText("Username is required"), USERNAME_ERROR_TEXT);
         softAssert.assertTrue(isErrorContainsText("Username is required"), USERNAME_ERROR_TEXT);
         softAssert.assertTrue(isErrorContainsText("Username is required"), USERNAME_ERROR_TEXT + "(2)");
         softAssert.assertTrue(isErrorContainsText("Password is required"), "Error for password not found or different");
         Assert.assertTrue(isErrorContainsText("Username and password do not match any user in this service"),
                 "Error for password not found or different");
     }
+
     private boolean isErrorContainsText(String expectedText){
         String text;
         try {
@@ -42,7 +42,7 @@ public class LoginDataProviderNegativeTest extends BaseTest {
         } catch (NoSuchElementException ignore) {
             text = "";
         }
-
         return text.contains(expectedText);
     }
+
 }

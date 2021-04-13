@@ -10,11 +10,9 @@ import pages.LoginPage;
 public class LoginDataProviderPositiveTest extends BaseTest {
     @DataProvider(name= "credentials")
     private Object[][] credentials() {
-        String password = "secret-sauce";
+        String password = "secret_sauce";
         return new Object[][]{{"standard_user", password}, {"problem_user", password},{"performance_glitch_user", password}};
-
-            }
-
+    }
 
     @Test (dataProvider = "credentials")
     public void LoginDataProviderPositiveTest(String username, String password){
@@ -23,11 +21,7 @@ public class LoginDataProviderPositiveTest extends BaseTest {
         loginPage.passwordField.sendKeys(password);
         loginPage.loginButton.click();
 
-            InventoryPage inventoryPage = new InventoryPage(driver);
-            Assert.assertEquals(inventoryPage.getTitleText().toLowerCase(),"products", "User not logged on!");
-
-
-
-
+        InventoryPage inventoryPage = new InventoryPage(driver);
+        Assert.assertEquals(inventoryPage.getTitleText().toLowerCase(),"products", "User not logged on!");
     }
 }

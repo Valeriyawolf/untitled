@@ -40,7 +40,6 @@ public class LoginNegativeTest extends BaseTest {
         } catch (NoSuchElementException ignore) {
             text = "";
         }
-
         return text.contains(expectedText);
     }
 
