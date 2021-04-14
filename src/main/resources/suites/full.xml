@@ -1,0 +1,6 @@
+<suite name ="Suite">
+    <test name = "Full">
+        <packages name = "tests">
+         </packages>
+    </test>
+</suite>
