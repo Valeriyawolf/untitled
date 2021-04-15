@@ -27,14 +27,14 @@ public class LoginDataProviderNegativeTest extends BaseTest {
         loginPage.passwordField.sendKeys(password);
         loginPage.loginButton.click();
 
-        if (username= EMPTY_STRING ; password =EMPTY_STRING){
-            softAssert.assertTrue(isErrorContainsText("Username is required"), USERNAME_ERROR_TEXT);}
-        else if(username= EMPTY_STRING ; password =password){
-            softAssert.assertTrue(isErrorContainsText("Username is required"), USERNAME_ERROR_TEXT + "(2)");}
-        else if (username= username ; password =EMPTY_STRING){
-            softAssert.assertTrue(isErrorContainsText("Password is required"), "Error for password not found or different");}
-        else if (username= "Test" ; password = "Test"){
-            softAssert.assertTrue(isErrorContainsText("Username and password do not match any user in this service"),
+        if (username.equals(EMPTY_STRING) && password.equals(EMPTY_STRING)){
+            Assert.assertTrue(isErrorContainsText("Username is required"), USERNAME_ERROR_TEXT);}
+        else if(username.equals(EMPTY_STRING)  && password.equals(password)){
+            Assert.assertTrue(isErrorContainsText("Username is required"), USERNAME_ERROR_TEXT + "(2)");}
+        else if (username.equals(username)  && password.equals(EMPTY_STRING)){
+            Assert.assertTrue(isErrorContainsText("Password is required"), "Error for password not found or different");}
+        else if (username.equals("Test")  && password.equals("Test")){
+            Assert.assertTrue(isErrorContainsText("Username and password do not match any user in this service"),
                     "Error for password not found or different");}
 
     }
