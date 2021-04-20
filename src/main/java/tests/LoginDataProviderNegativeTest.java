@@ -27,22 +27,24 @@ public class LoginDataProviderNegativeTest extends BaseTest {
         loginPage.passwordField.sendKeys(password);
         loginPage.loginButton.click();
 
-        if (username.equals(EMPTY_STRING) && password.equals(EMPTY_STRING)){
-            Assert.assertTrue(isErrorContainsText("Username is required"), USERNAME_ERROR_TEXT);}
-        else if(username.equals(EMPTY_STRING)  && password.equals(password)){
-            Assert.assertTrue(isErrorContainsText("Username is required"), USERNAME_ERROR_TEXT + "(2)");}
-        else if (username.equals(username)  && password.equals(EMPTY_STRING)){
-            Assert.assertTrue(isErrorContainsText("Password is required"), "Error for password not found or different");}
-        else if (username.equals("Test")  && password.equals("Test")){
+        if (username.equals(EMPTY_STRING) && password.equals(EMPTY_STRING)) {
+            Assert.assertTrue(isErrorContainsText("Username is required"), USERNAME_ERROR_TEXT);
+            Assert.assertTrue(isErrorContainsText("Username is required"), USERNAME_ERROR_TEXT + "(2)");
+        } else if (username.equals(EMPTY_STRING) && password.equals(password)) {
+            Assert.assertTrue(isErrorContainsText("Username is required"), USERNAME_ERROR_TEXT + "(2)");
+        } else if (username.equals(username) && password.equals(EMPTY_STRING)) {
+            Assert.assertTrue(isErrorContainsText("Password is required"), "Error for password not found or different");
+        } else if (username.equals("Test") && password.equals("Test")) {
             Assert.assertTrue(isErrorContainsText("Username and password do not match any user in this service"),
-                    "Error for password not found or different");}
-
+                    "Error for password not found or different");
+        }
     }
 
     private boolean isErrorContainsText(String expectedText){
         String text;
         try {
             text = loginPage.error.getText();
+            text = "test";
         } catch (NoSuchElementException ignore) {
             text = "";
         }
