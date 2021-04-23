@@ -7,7 +7,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 
-public class LoginDataProviderNegativeTest extends BaseTest {
+public class LoginDataProviderNegativeTestHomework6 extends BaseTest {
     private final static String EMPTY_STRING = "";
     private final static String USERNAME_ERROR_TEXT = "Error for username";
     private LoginPage loginPage;

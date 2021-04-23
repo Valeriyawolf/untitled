@@ -29,4 +29,6 @@ public abstract class BasePages {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
+    public abstract void login();
 }

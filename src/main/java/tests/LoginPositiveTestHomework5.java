@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.InventoryPage;
 import pages.LoginPage;
 
-public class LoginPositiveTest extends BaseTest {
+public class LoginPositiveTestHomework5 extends BaseTest {
 
   private final static String EXPECTED_TITLE = "products";
   final static String PASSWORD = "secret_sauce";

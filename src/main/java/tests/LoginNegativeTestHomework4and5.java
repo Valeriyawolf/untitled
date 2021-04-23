@@ -6,10 +6,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 
-import static tests.LoginPositiveTest.CORRECT_LOGIN;
-import static tests.LoginPositiveTest.PASSWORD;
+import static tests.LoginPositiveTestHomework5.CORRECT_LOGIN;
+import static tests.LoginPositiveTestHomework5.PASSWORD;
 
-public class LoginNegativeTest extends BaseTest {
+public class LoginNegativeTestHomework4and5 extends BaseTest {
     private final static String EMPTY_STRING = "";
     private final static String USERNAME_ERROR_TEXT = "Error for username";
     private LoginPage loginPage;
